@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jquery.letterpop.js Demo</title>
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="stylesheet" href="screen.css" media="screen">
+	</head>
+	<body>
+		<h1>Headings Work Well</h1>
+		
+		<p>Click on the individual letters to "pop" them. Try click on some letters in the heading above.</p>
+		
+		<h2>Headings That Are Long Can Work Well, Too</h2>
+		
+		<p class="letterpop">This paragraph is setup with letterpop, too! It's not display font, but it still allows us to pop the individual letters in the paragraph.</p>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script src="letterpop/jquery.letterpop.js"></script>
+		<script>
+			$(':header,.letterpop').letterpop();
+		</script>
+	</body>
+</html>
