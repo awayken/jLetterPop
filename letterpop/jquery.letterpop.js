@@ -2,7 +2,7 @@
 	jQuery Plugin
 	Name: letterpop
 	Author: Miles Rausch (http://awayken.com)
-	Version: VER
+	Version: 0.1
 ******************/
 (function($){
 	$.letterpop = function(el, options){
