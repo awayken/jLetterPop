@@ -2,18 +2,34 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>jquery.letterpop.js Demo</title>
+		<title>jLetterPop Demo</title>
 		<meta name="robots" content="noindex, nofollow">
 		<link rel="stylesheet" href="screen.css" media="screen">
 	</head>
 	<body>
-		<h1 class="letterpop">Headings Work Well</h1>
+		<h1>jLetterPop Demo</h1>
 		
-		<p>Click on the individual letters to "pop" them. Try click on some letters in the heading above.</p>
+		<p>Welcome to the jLetterPop demo page! You're probably here to see jLetterPop in action, so let's get started.</p>
 		
-		<h2>Headings That Are Long Can Work Well, Too</h2>
+		<p class="letterpop">Pop These Letters</p>
 		
-		<p class="letterpop">This paragraph is setup with letterpop, too! It's not display font, but it still allows us to pop the individual letters in the paragraph.</p>
+		<p>The script is pretty simple at this point. Just call the plugin on whatever element you want.</p>
+		
+		<p><code>&lt;script src=&quot;letterpop/jquery.letterpop.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+	$('.letterpop').letterpop();
+&lt;/script&gt;</code></p>
+
+		<p>The plugin uses the following CSS classes:</p>
+		
+		<ul>
+			<li><code>.letterpop</code> - added to the element you call the plugin on</li>
+			<li><code>.letterpop_letter</code> - each letter gets a span with this class</li>
+			<li><code>.letterpop_popper</code> - the animating letter is a span with this class</li>
+			<li><code>.letterpop_hover</code> - class gets add to each letter when you hover</li>
+		</ul>
+		
+		<p class="letterpop">Have Fun!</p>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 		<script src="letterpop/jquery.letterpop.js"></script>

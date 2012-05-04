@@ -41,7 +41,8 @@
 							'position': 'absolute',
 							'top': $eloffset.top,
 							'left': $eloffset.left,
-							'z-index': 99
+							'z-index': 99,
+							'display': 'block'
 						});
 						
 					popper
@@ -52,6 +53,12 @@
 							'margin-left': '-0.3em'
 						}, speed, function () { $(this).remove(); });
 					$el
+						.css({
+							'min-width': 0,
+							'max-width': 'none',
+							'min-height': 0,
+							'max-height': 'none'
+						})
 						.animate({
 							'width': 0
 						}, speed, function () { $(this).remove(); });
