@@ -4,7 +4,9 @@
 	<property name="source_folder" location="letterpop" />
 	<property name="tools_folder" location="tools" />
 	
-	<target name="dist" depends="minify" description="Create a distributable version of jLetterPop.">
+	<target name="dist" depends="minify" description="Create a distributable version of jLetterPop."></target>
+	
+	<target name="test" depends="minify" description="Create a distributable version of jLetterPop.">
 		<copy file="index.html" todir="${dist_folder}" overwrite="true" />
 		<copy file="screen.css" todir="${dist_folder}" overwrite="true" />
 		<replace file="${dist_folder}/index.html" token="letterpop/jquery.letterpop.js" value="jquery.letterpop.min.js" failOnNoReplacements="true" />
