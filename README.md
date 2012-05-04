@@ -1,4 +1,4 @@
-letter-pop
+jLetterPop
 ==========
 
-A jQuery script to pop the letters of an element.
+A jQuery plugin to pop the letters of an element.
