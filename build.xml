@@ -1,0 +1,31 @@
+<project name="jLetterPop" default="dist" basedir=".">
+	
+	<property name="dist_folder" location="dist" />
+	<property name="source_folder" location="letterpop" />
+	<property name="tools_folder" location="tools" />
+	
+	<target name="dist" depends="minify" description="Create a distributable version of jLetterPop.">
+		<copy file="index.html" todir="${dist_folder}" overwrite="true" />
+		<copy file="screen.css" todir="${dist_folder}" overwrite="true" />
+		<replace file="${dist_folder}/index.html" token="letterpop/jquery.letterpop.js" value="jquery.letterpop.min.js" failOnNoReplacements="true" />
+	</target>
+	
+	<target name="minify" depends="init" description="Minify the scripts.">
+		<java jar="${tools_folder}/yuicompressor-2.4.7.jar" fork="true">
+		
+			<arg value="-o" />
+			<arg path="${dist_folder}/jquery.letterpop.min.js" />
+			
+			<arg path="${source_folder}/jquery.letterpop.js" />
+		</java>
+	</target>
+	
+	<target name="init" description="Initialize our build.">
+		<mkdir dir="${dist_folder}" />
+	</target>
+	
+	<target name="clean" description="Clean up.">
+		<delete dir="${dist_folder}"/>
+	</target>
+	
+</project>
